@@ -1,7 +1,7 @@
 {
-  "name": "sequelize-cli",
-  "version": "6.3.0",
-  "description": "The Sequelize CLI",
+  "name": "sequelize-clickhouse-cli",
+  "version": "6.3.0-clickhouse.1",
+  "description": "The Sequelize CLI clickhouse support",
   "types": "./types.d.ts",
   "bin": {
     "sequelize": "./lib/sequelize",
@@ -28,6 +28,7 @@
     "@commitlint/cli": "17.4.2",
     "@commitlint/config-angular": "17.4.2",
     "bluebird": "3.7.2",
+    "clickhouse": "^2.6.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.6.0",
     "eslint-plugin-prettier": "4.2.1",
@@ -41,7 +42,7 @@
     "pg-hstore": "latest",
     "prettier": "2.8.3",
     "semver": "7.3.8",
-    "sequelize": "6.28.0",
+    "sequelize-clickhouse-client": "6.31.1-clickhouse.0",
     "sqlite3": "latest",
     "through2": "4.0.2"
   },

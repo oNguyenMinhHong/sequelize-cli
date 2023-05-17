@@ -135,6 +135,9 @@ function getCreateDatabaseQuery(sequelize, config, options) {
         ' END;'
       );
 
+    case 'clickhouse':
+      return queryGenerator.createDatabaseQuery(config.database);
+
     default:
       helpers.view.error(
         `Dialect ${config.dialect} does not support db:create / db:drop commands`
@@ -171,9 +174,13 @@ function getDatabaseLessSequelize() {
       config.database = 'master';
       break;
 
+    case 'clickhouse':
+      config.database = 'default';
+      break;
+
     default:
       helpers.view.error(
-        `Dialect ${config.dialect} does not support db:create / db:drop commands`
+        `> Dialect ${config.dialect} does not support db:create / db:drop commands`
       );
   }
 
